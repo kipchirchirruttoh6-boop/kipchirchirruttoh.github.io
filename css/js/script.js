@@ -1,34 +1,26 @@
-window.addEventListener("scroll",function(){
+function toggleDarkMode(){
 
-let sections=document.querySelectorAll("section");
+document.body.classList.toggle("dark-mode");
+
+}
+
+// Scroll animation
+
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
 
 sections.forEach(section=>{
 
-let position=section.getBoundingClientRect().top;
+const position = section.getBoundingClientRect().top;
 
-let screen=window.innerHeight;
+const screen = window.innerHeight;
 
 if(position < screen-100){
 
 section.style.opacity=1;
 section.style.transform="translateY(0)";
-}
 
-});
-
-});
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-
-sections.forEach(section => {
-
-const position = section.getBoundingClientRect().top;
-
-const screenHeight = window.innerHeight;
-
-if(position < screenHeight - 100){
-section.classList.add("show");
 }
 
 });
