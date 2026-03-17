@@ -101,3 +101,12 @@ text-decoration:none;
 .navbar a:hover{
 color:#00c3ff;
 }
+.hero{
+text-align:center;
+padding:80px;
+background:#f4f4f4;
+}
+
+.hero img{
+border-radius:50%;
+}
