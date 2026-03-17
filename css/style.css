@@ -1,90 +1,17 @@
 body{
-font-family: Arial;
+font-family:'Poppins',sans-serif;
 margin:0;
 background:#f4f4f4;
+color:#333;
 }
 
-header{
-background:#222;
-color:white;
-text-align:center;
-padding:40px;
-}
-
-nav{
-text-align:center;
-background:#444;
-padding:10px;
-}
-
-nav a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-weight:bold;
-}
-
-nav a:hover{
-color:#00c3ff;
-}
-
-section{
-padding:40px;
-max-width:900px;
-margin:auto;
-background:white;
-margin-top:20px;
-}
-
-.skills ul{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#222;
-color:white;
-margin-top:40px;
-}
-.project{
-border:1px solid #ddd;
-padding:20px;
-margin:20px 0;
-border-radius:10px;
-}
-section{
-opacity:0;
-transform:translateY(40px);
-transition: all 0.8s ease;
-}
-
-section.show{
-opacity:1;
-transform:translateY(0);
-}
-.project-card{
-border:1px solid #ddd;
-padding:20px;
-margin:20px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-
-.project-card:hover{
-transform:scale(1.05);
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
-}
 .navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
 background:#111;
-padding:20px;
 color:white;
+padding:20px;
 }
 
 .navbar ul{
@@ -98,18 +25,56 @@ color:white;
 text-decoration:none;
 }
 
-.navbar a:hover{
-color:#00c3ff;
-}
 .hero{
 text-align:center;
 padding:80px;
-background:#f4f4f4;
 }
 
 .hero img{
+width:180px;
 border-radius:50%;
 }
-body{
-font-family:'Poppins',sans-serif;
+
+.btn{
+background:#007BFF;
+color:white;
+padding:12px 20px;
+text-decoration:none;
+border-radius:5px;
+}
+
+.skills{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.skills li{
+background:#eee;
+padding:10px;
+border-radius:5px;
+}
+
+.project-card{
+border:1px solid #ddd;
+padding:20px;
+margin:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:scale(1.05);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Dark mode */
+
+.dark-mode{
+background:#121212;
+color:white;
+}
+
+.dark-mode .navbar{
+background:#000;
 }
