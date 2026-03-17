@@ -65,3 +65,16 @@ section.show{
 opacity:1;
 transform:translateY(0);
 }
+.project-card{
+border:1px solid #ddd;
+padding:20px;
+margin:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
