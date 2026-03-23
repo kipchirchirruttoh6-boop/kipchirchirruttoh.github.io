@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -61,7 +61,7 @@
 
 <!-- ABOUT -->
 
-<section id="about" class="about">
+<section id="about" class="about" data-aos="fade-up">
 
 <h2>About Me</h2>
 
@@ -84,7 +84,7 @@ and study modern research trends in artificial intelligence.
 
 <!-- SKILLS -->
 
-<section id="skills" class="skills">
+<section id="skills" class="skills" data-aos="fade-up">
 <div class="skills-container">
   <span>Python</span>
   <span>Machine Learning</span>
@@ -98,10 +98,43 @@ and study modern research trends in artificial intelligence.
 
 </section>
 
+<section id="projects" class="projects" data-aos="fade-up">
 
+<h2>Projects</h2>
+
+<div class="projects-container">
+
+  <div class="project-card">
+    <h3>Sentiment Analysis Model</h3>
+    <p>
+      Built an NLP model that classifies text into positive, negative, or neutral sentiment
+      using machine learning techniques.
+    </p>
+    <a href="#" class="btn">View Project</a>
+  </div>
+
+  <div class="project-card">
+    <h3>Fraud Detection System</h3>
+    <p>
+      Developed a machine learning system to detect fraudulent transactions using anomaly detection.
+    </p>
+    <a href="#" class="btn">View Project</a>
+  </div>
+
+  <div class="project-card">
+    <h3>AI Chatbot</h3>
+    <p>
+      Designed a conversational AI chatbot using natural language processing techniques.
+    </p>
+    <a href="#" class="btn">View Project</a>
+  </div>
+
+</div>
+
+</section>
 <!-- CONTACT -->
 
-<section id="contact" class="contact">
+<section id="contact" class="contact" data-aos="fade-up">
 
 <h2>Contact</h2>
 
@@ -120,6 +153,14 @@ and study modern research trends in artificial intelligence.
 
 </footer>
 <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration:1000,
+  once:true
+});
+</script>
 </body>
 
 </html>
