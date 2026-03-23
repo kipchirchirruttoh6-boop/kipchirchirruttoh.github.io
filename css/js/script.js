@@ -1,28 +1,36 @@
-function toggleDarkMode(){
+const roles = [
+  "AI Engineer",
+  "Machine Learning Specialist",
+  "NLP Enthusiast",
+  "Data Scientist"
+];
 
-document.body.classList.toggle("dark-mode");
+let i = 0;
+let j = 0;
+let currentRole = "";
+let isDeleting = false;
 
+function typeEffect() {
+  currentRole = roles[i];
+
+  if (isDeleting) {
+    document.getElementById("typing").textContent = currentRole.substring(0, j--);
+  } else {
+    document.getElementById("typing").textContent = currentRole.substring(0, j++);
+  }
+
+  if (!isDeleting && j === currentRole.length) {
+    isDeleting = true;
+    setTimeout(typeEffect, 1000);
+    return;
+  }
+
+  if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % roles.length;
+  }
+
+  setTimeout(typeEffect, isDeleting ? 50 : 100);
 }
 
-// Scroll animation
-
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll",()=>{
-
-sections.forEach(section=>{
-
-const position = section.getBoundingClientRect().top;
-
-const screen = window.innerHeight;
-
-if(position < screen-100){
-
-section.style.opacity=1;
-section.style.transform="translateY(0)";
-
-}
-
-});
-
-});
+typeEffect();
